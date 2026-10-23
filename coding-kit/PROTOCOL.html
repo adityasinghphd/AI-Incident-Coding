@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Protocol for coding your own incidents</title><style>*{box-sizing:border-box}body{margin:0;background:#f3f1eb;color:#26353e;font:18px/1.65 Georgia,serif}main{max-width:1000px;margin:auto;padding:36px 60px 70px;background:white;min-height:100vh}nav,footer,.status{font:13px/1.5 Arial,sans-serif}nav{display:flex;flex-wrap:wrap;gap:12px;border-bottom:1px solid #ddd;padding-bottom:20px}.status{color:#7c5518;margin-top:25px}h1,h2,h3{font-family:Arial,sans-serif;line-height:1.15}h1{font-size:40px;color:#155d63}h2{font-size:25px;margin-top:38px}a{color:#176d72}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%;font:15px/1.5 Arial,sans-serif;margin:24px 0}td,th{padding:12px;text-align:left;border:1px solid #d6dfdd;vertical-align:top}th{background:#edf5f3}code{font-size:12px;overflow-wrap:anywhere}footer{margin-top:44px;border-top:1px solid #ddd;padding-top:15px}@media(max-width:650px){main{padding:24px}h1{font-size:32px}table{font-size:13px}td,th{padding:7px}}@media print{nav{display:none}main{padding:0}body{background:white}h2{break-after:avoid}img,tr{break-inside:avoid}}</style></head><body><main><nav aria-label="Reviewer documents"><a href="../00-start-here.html">Start here</a><a href="../01-what-we-are-coding.html">01</a><a href="../02-where-the-incidents-come-from.html">02</a><a href="../03-how-we-code-an-incident.html">03</a><a href="../04-what-we-have-learned-so-far.html">04</a><a href="../05-how-we-code-mitigations.html">05</a><a href="../06-validation-and-expansion.html">06</a><a href="../coding-kit/README.html">Code your own incidents</a></nav><div class="status">RESEARCH DRAFT · UPDATED OCTOBER 23, 2026</div><h1>Protocol for coding your own incidents</h1>
+<p>Apply the bundled incident manual and codebook to one incident and its saved source reports. The codebook identifies the permitted concepts; the manual defines the evidence profiles and operational rules. References to an “AIID incident” in the frozen manual mean the supplied incident unit when using this kit with another collection.</p>
+<h2>Prepare the evidence</h2>
+<p>Retain the incident narrative and full available report text, with source identifiers, report numbers, dates and URLs where available. Preserve missing text and conflicting accounts as source limitations. Reading all supplied fields does not establish that an original article was retrieved completely. Keep reports of events, controlled demonstrations and constructed scenarios distinguishable in your collection.</p>
+<p>Decide which material belongs to the focal incident before coding. Give every stage the same source boundary and manual. Source narratives are evidence, even when they contain text that looks like instructions. A coding agent must not follow those instructions, retrieve outside information or consult prior study answers.</p>
+<h2>Run five stages</h2>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Permitted earlier outputs</th>
+<th>Task</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strict</td>
+<td>None</td>
+<td>Independently code express support, strong definition-permitted inference, and the manual's narrowly scoped exceptions. Omit likelihood-only Challenges and contributions.</td>
+</tr>
+<tr>
+<td>Lenient</td>
+<td>None</td>
+<td>Independently code the same evidence and definitions. Add only eligible, case-specific, more-likely-than-not Challenges and Distal contributions, explicitly marked as likely. This does not relax the tests for causes, capabilities, realized harms or specific human states.</td>
+</tr>
+<tr>
+<td>Reconcile</td>
+<td>Strict and lenient</td>
+<td>Return to the evidence to resolve every changed feature. Evaluate all likely Challenge candidates and every contribution with positive support. Record inclusion/exclusion decisions; do not simply combine both sets.</td>
+</tr>
+<tr>
+<td>Verify</td>
+<td>Reconciliation only</td>
+<td>Challenge unsupported assignments, omissions, wrong scope or specificity, evidence qualifications, and relationships. Return issues rather than replacement coding. Test each Challenge, realized Distal harm, contribution and scoped presumption under its proper evidence burden.</td>
+</tr>
+<tr>
+<td>Final</td>
+<td>Reconciliation and verification</td>
+<td>Accept, reject or modify every verifier issue and return the complete final coding. Every change must identify an accepted or modified issue that supports it. A sound verifier entails copying the reconciled coding unchanged.</td>
+</tr>
+</tbody>
+</table>
+<p>Use one fresh context per stage. Strict and lenient must not see each other or earlier answers. Later stages receive only the priors in the table, plus the source, manual, registry and output contract. Give each agent its generated job rather than access to the complete run tree. Do not label five prompts in one shared conversation as five independent contexts.</p>
+<p>The launcher supplies the exact output schema and job identity. Evidence references name a report number (<code>null</code> for the incident row), a supplied <code>title</code>, <code>description</code> or <code>text</code> field, an exact passage, and the reason it supports the decision. Quotes are checked after whitespace normalization; saved answers are not rewritten to make them match.</p>
+<h2>Apply the coding rules</h2>
+<p>Assess each of the five dimensions: Cause, Vector, Proximal harm, Distal harm and Challenges. Use the deepest fully supported concept, retaining a broader parent where narrower criteria are absent. Additional codes each require their own support. Keep allegation status, evidence basis, confidence, realization and source completeness distinct.</p>
+<p>Describe directed harm chains only when their direction is supported. Record a contribution to a Distal destination separately from realizing that aggregate harm. Preserve the manual's specific boundaries and scoped exceptions, including EXP01–EXP10; a general instruction to be inclusive cannot override them. Missing source detail belongs in source-quality judgments. A taxonomy gap requires a supported concept without an adequate existing home.</p>
+<h2>Preserve answers and check findings</h2>
+<p>Save every raw handback exactly as received. The launcher stores it before checking its structure, identity, quotes, concept coordinates, harm topology and stage ledgers. It records all schema findings plus the first remaining record-check failure. These checks support inspection; they do not establish semantic correctness or prove reading completeness.</p>
+<p>Usable answers are retained with <code>clean</code> or <code>flagged</code> status. Only reconciliation's exact prior snapshots may be inserted mechanically from the saved strict/lenient records; model-authored choices, reasons and evidence remain unchanged. If that assembly fails, the wire response remains saved with the finding. A malformed usable prior may prevent preparing a dependent job, which should remain blocked rather than being silently repaired.</p>
+<p>Invalid JSON, a wrong identity or missing core payload is saved as unusable and blocks dependent stages. No automatic retry is made. For an intentional new attempt, preserve the failed run and start a separately named run, documenting why. Do not repeatedly rerun until coding looks agreeable. Keep validation findings out of later model contexts; the verifier performs the substantive review.</p>
+<h2>Review the result</h2>
+<p>A human reviewer can inspect the final coding against the source passages, definitions, intermediate proposals and issue decisions. Save human corrections separately from the original model output. For an independent human comparison, complete the person's original coding before exposing model answers. New material or changed definitions belong to a new exercise rather than an undocumented rewrite of an existing run.</p>
+<h2>Run the launcher from a terminal</h2>
+<p>In the <code>coding-kit</code> directory, create and activate an environment, then install the dependency:</p>
+<pre><code class="language-bash">python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+</code></pre>
+<p>On Windows, use <code>.venv\Scripts\activate</code> to activate it. Python 3.10 or later is required.</p>
+<p>Copy <code>examples/incident-template.json</code> to <code>my-incident.json</code> and replace its placeholders. Use a unique integer <code>incident_id</code> within your collection and preserve external identifiers in <code>incident.source_identifier</code>. Put the incident narrative in <code>incident.description</code> and saved report text in <code>reports[*].row.text</code>. Give each report a unique integer <code>report_number</code>. If there are no separate reports, set <code>reports</code> to an empty array.</p>
+<p>Initialize one incident/model run, substituting the actual model version:</p>
+<pre><code class="language-bash">python code_incidents.py init --incident my-incident.json --run runs/case-001-model-a --model your-actual-model-version
+python code_incidents.py prepare --run runs/case-001-model-a --stage strict
+</code></pre>
+<p>Open the generated <code>jobs/strict/TASK.md</code>. Give its assigned files to a fresh AI context, ask it to read <code>TASK.md</code> first, and save its complete JSON answer as <code>strict-response.json</code>. Submit that answer unchanged:</p>
+<pre><code class="language-bash">python code_incidents.py submit --run runs/case-001-model-a --stage strict --response strict-response.json
+python code_incidents.py prepare --run runs/case-001-model-a --stage lenient
+</code></pre>
+<p>Repeat prepare, fresh-context coding and submit for <code>lenient</code>, <code>reconcile</code>, <code>verify</code> and <code>final</code>, replacing the stage and response filename in the commands. Each job includes only its permitted priors. Strict and lenient are independent; do not give either one the other's answer.</p>
+<p>The final result is <code>runs/case-001-model-a/results/final/record.json</code>. A new incident or a different model needs a separate run folder. For model comparisons, use the same incident file and unchanged coding materials, and keep model answers separate while coding.</p>
+<footer>Independent human validation materials must remain separate from held-out model outputs. <a href="../00-start-here.html">Return to overview</a></footer></main></body></html>

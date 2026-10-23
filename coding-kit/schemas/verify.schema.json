@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "incident_id": {
+      "type": "integer"
+    },
+    "inference_tests": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "burden": {
+            "enum": [
+              "source_support",
+              "eligible_likelihood",
+              "scoped_exception"
+            ]
+          },
+          "evidence": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "field": {
+                  "enum": [
+                    "title",
+                    "description",
+                    "text"
+                  ]
+                },
+                "quote": {
+                  "maxLength": 1500,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "reasoning": {
+                  "maxLength": 1500,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "report_number": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "report_number",
+                "field",
+                "quote",
+                "reasoning"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "issue_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "rationale": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "rule_ids": {
+            "items": {
+              "maxLength": 1500,
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "target_key": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "verdict": {
+            "enum": [
+              "supported",
+              "unsupported",
+              "uncertain"
+            ]
+          }
+        },
+        "required": [
+          "target_key",
+          "burden",
+          "verdict",
+          "rule_ids",
+          "rationale",
+          "evidence",
+          "issue_id"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "issues": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "detail": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "evidence": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "field": {
+                  "enum": [
+                    "title",
+                    "description",
+                    "text"
+                  ]
+                },
+                "quote": {
+                  "maxLength": 1500,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "reasoning": {
+                  "maxLength": 1500,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "report_number": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "report_number",
+                "field",
+                "quote",
+                "reasoning"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "feature_keys": {
+            "items": {
+              "maxLength": 1500,
+              "minLength": 1,
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "issue_id": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "unsupported",
+              "missed_code",
+              "wrong_axis",
+              "wrong_scope",
+              "wrong_primary",
+              "wrong_grain",
+              "wrong_relation",
+              "wrong_status",
+              "source_quality",
+              "other"
+            ]
+          },
+          "rule_ids": {
+            "items": {
+              "maxLength": 1500,
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "severity": {
+            "enum": [
+              "minor",
+              "major"
+            ]
+          },
+          "suggested_change": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "issue_id",
+          "feature_keys",
+          "kind",
+          "severity",
+          "rule_ids",
+          "detail",
+          "suggested_change",
+          "evidence"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "job_id": {
+      "maxLength": 1500,
+      "minLength": 1,
+      "type": "string"
+    },
+    "model_id": {
+      "maxLength": 1500,
+      "minLength": 1,
+      "type": "string"
+    },
+    "run_id": {
+      "maxLength": 1500,
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0"
+    },
+    "source_review": {
+      "additionalProperties": false,
+      "properties": {
+        "all_supplied_fields_read": {
+          "const": true
+        },
+        "limitations": {
+          "maxLength": 1500,
+          "type": "string"
+        },
+        "reports_read": {
+          "items": {
+            "type": "integer"
+          },
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "all_supplied_fields_read",
+        "reports_read",
+        "limitations"
+      ],
+      "type": "object"
+    },
+    "source_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "stage": {
+      "const": "verify"
+    },
+    "verdict": {
+      "enum": [
+        "sound",
+        "minor_issues",
+        "major_issues"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "incident_id",
+    "model_id",
+    "run_id",
+    "job_id",
+    "source_sha256",
+    "source_review",
+    "stage",
+    "verdict",
+    "issues",
+    "inference_tests"
+  ],
+  "type": "object"
+}
