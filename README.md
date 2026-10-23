@@ -2,6 +2,10 @@
 
 Research materials and a reusable kit for coding AI incident evidence with a risk taxonomy. The taxonomy separates five dimensions: Cause, Vector, Proximal harm, Distal harm, and Challenges. Coding connects selected concepts to source passages, reasons and supported relationships between harms.
 
+## Read online
+
+[Open the documentation website](https://adityasinghphd.github.io/AI-Incident-Coding/) or go directly to the [codebook](https://adityasinghphd.github.io/AI-Incident-Coding/coding-kit/CODEBOOK.html), [coding manual](https://adityasinghphd.github.io/AI-Incident-Coding/coding-kit/materials/CODING_MANUAL.html), or [getting-started guide](https://adityasinghphd.github.io/AI-Incident-Coding/coding-kit/README.html). No download is needed to read them.
+
 ## Read about the work
 
 Start with the [overview](00-start-here.md), then explore:
@@ -21,7 +25,7 @@ Follow the [getting-started guide](coding-kit/README.md). The kit includes the [
 
 The launcher prepares each stage's materials and saves the returned answers. It makes no model or API calls. The kit uses the frozen v0.9.5 incident instrument; this repository is a research draft, and the reliability study is intended to assess how consistently it can be applied.
 
-Markdown files can be read directly on GitHub. The matching HTML reading copies open locally after downloading the repository; open `index.html` for the document overview.
+Markdown files can also be read directly on GitHub. To read offline, download the repository and open `index.html`.
 
 ## Licensing
 
