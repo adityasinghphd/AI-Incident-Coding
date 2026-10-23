@@ -1,0 +1,818 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "coding": {
+      "additionalProperties": false,
+      "properties": {
+        "causes": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "assertion_status": {
+                "enum": [
+                  "reported",
+                  "alleged",
+                  "disputed",
+                  "stipulated",
+                  "unknown"
+                ]
+              },
+              "concept_id": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "evidence": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "enum": [
+                        "title",
+                        "description",
+                        "text"
+                      ]
+                    },
+                    "quote": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "reasoning": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "report_number": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "report_number",
+                    "field",
+                    "quote",
+                    "reasoning"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "evidence_basis": {
+                "enum": [
+                  "express",
+                  "strong_inference",
+                  "likely_inference",
+                  "maintainer_presumption"
+                ]
+              },
+              "primary": {
+                "type": "boolean"
+              },
+              "why": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "concept_id",
+              "confidence",
+              "assertion_status",
+              "evidence_basis",
+              "why",
+              "evidence",
+              "primary"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "challenges": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "assertion_status": {
+                "enum": [
+                  "reported",
+                  "alleged",
+                  "disputed",
+                  "stipulated",
+                  "unknown"
+                ]
+              },
+              "concept_id": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "evidence": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "enum": [
+                        "title",
+                        "description",
+                        "text"
+                      ]
+                    },
+                    "quote": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "reasoning": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "report_number": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "report_number",
+                    "field",
+                    "quote",
+                    "reasoning"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "evidence_basis": {
+                "enum": [
+                  "express",
+                  "strong_inference",
+                  "likely_inference",
+                  "maintainer_presumption"
+                ]
+              },
+              "evidence_status": {
+                "enum": [
+                  "evidenced",
+                  "likely"
+                ]
+              },
+              "why": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "concept_id",
+              "confidence",
+              "assertion_status",
+              "evidence_basis",
+              "why",
+              "evidence",
+              "evidence_status"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "contributions": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "evidence": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "enum": [
+                        "title",
+                        "description",
+                        "text"
+                      ]
+                    },
+                    "quote": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "reasoning": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "report_number": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "report_number",
+                    "field",
+                    "quote",
+                    "reasoning"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "evidence_basis": {
+                "enum": [
+                  "express",
+                  "strong_inference",
+                  "likely_inference"
+                ]
+              },
+              "evidence_status": {
+                "enum": [
+                  "evidenced",
+                  "likely"
+                ]
+              },
+              "source_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source_kind": {
+                "enum": [
+                  "incident",
+                  "cause",
+                  "vector",
+                  "harm"
+                ]
+              },
+              "target_id": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              },
+              "why": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "source_kind",
+              "source_id",
+              "target_id",
+              "evidence_status",
+              "evidence_basis",
+              "confidence",
+              "why",
+              "evidence"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "gaps": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "description": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              },
+              "evidence": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "enum": [
+                        "title",
+                        "description",
+                        "text"
+                      ]
+                    },
+                    "quote": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "reasoning": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "report_number": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "report_number",
+                    "field",
+                    "quote",
+                    "reasoning"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "nearest_concept_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "why_no_home": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "description",
+              "nearest_concept_id",
+              "why_no_home",
+              "evidence"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "harm_chains": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "evidence": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "enum": [
+                        "title",
+                        "description",
+                        "text"
+                      ]
+                    },
+                    "quote": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "reasoning": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "report_number": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "report_number",
+                    "field",
+                    "quote",
+                    "reasoning"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "from_id": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              },
+              "to_id": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              },
+              "why": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "from_id",
+              "to_id",
+              "why",
+              "evidence"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "harms": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "assertion_status": {
+                "enum": [
+                  "reported",
+                  "alleged",
+                  "disputed",
+                  "stipulated",
+                  "unknown"
+                ]
+              },
+              "concept_id": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "depiction_provenance": {
+                "enum": [
+                  "real",
+                  "fictional",
+                  "unknown",
+                  "not_applicable"
+                ]
+              },
+              "evidence": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "enum": [
+                        "title",
+                        "description",
+                        "text"
+                      ]
+                    },
+                    "quote": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "reasoning": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "report_number": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "report_number",
+                    "field",
+                    "quote",
+                    "reasoning"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "evidence_basis": {
+                "enum": [
+                  "express",
+                  "strong_inference",
+                  "likely_inference",
+                  "maintainer_presumption"
+                ]
+              },
+              "privacy_qualifiers": {
+                "items": {
+                  "enum": [
+                    "health_medical",
+                    "neural",
+                    "relational"
+                  ]
+                },
+                "type": "array",
+                "uniqueItems": true
+              },
+              "proximal_basis": {
+                "enum": [
+                  "source_support",
+                  "maintainer_presumption",
+                  "not_applicable"
+                ]
+              },
+              "realization_status": {
+                "enum": [
+                  "realized",
+                  "potential",
+                  "near_miss",
+                  "unknown"
+                ]
+              },
+              "role": {
+                "enum": [
+                  "parallel",
+                  "chain_link",
+                  "terminal"
+                ]
+              },
+              "why": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "concept_id",
+              "confidence",
+              "assertion_status",
+              "evidence_basis",
+              "why",
+              "evidence",
+              "realization_status",
+              "privacy_qualifiers",
+              "role",
+              "depiction_provenance",
+              "proximal_basis"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "notes": {
+          "maxLength": 1500,
+          "type": "string"
+        },
+        "primary_reason": {
+          "maxLength": 1500,
+          "minLength": 1,
+          "type": "string"
+        },
+        "primary_status": {
+          "enum": [
+            "resolved",
+            "unresolved",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "scope_reason": {
+          "maxLength": 1500,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope_status": {
+          "enum": [
+            "in_scope",
+            "out_of_scope",
+            "uncertain"
+          ]
+        },
+        "source_quality": {
+          "additionalProperties": false,
+          "properties": {
+            "detail_sufficiency": {
+              "enum": [
+                "sufficient",
+                "insufficient",
+                "unknown"
+              ]
+            },
+            "retrieval_completeness": {
+              "enum": [
+                "complete",
+                "incomplete",
+                "unknown"
+              ]
+            },
+            "why": {
+              "maxLength": 1500,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "retrieval_completeness",
+            "detail_sufficiency",
+            "why"
+          ],
+          "type": "object"
+        },
+        "unresolved": {
+          "items": {
+            "maxLength": 1500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "vectors": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "assertion_status": {
+                "enum": [
+                  "reported",
+                  "alleged",
+                  "disputed",
+                  "stipulated",
+                  "unknown"
+                ]
+              },
+              "concept_id": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "evidence": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "field": {
+                      "enum": [
+                        "title",
+                        "description",
+                        "text"
+                      ]
+                    },
+                    "quote": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "reasoning": {
+                      "maxLength": 1500,
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "report_number": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "report_number",
+                    "field",
+                    "quote",
+                    "reasoning"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "evidence_basis": {
+                "enum": [
+                  "express",
+                  "strong_inference",
+                  "likely_inference",
+                  "maintainer_presumption"
+                ]
+              },
+              "why": {
+                "maxLength": 1500,
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "concept_id",
+              "confidence",
+              "assertion_status",
+              "evidence_basis",
+              "why",
+              "evidence"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "scope_status",
+        "scope_reason",
+        "primary_status",
+        "primary_reason",
+        "source_quality",
+        "causes",
+        "vectors",
+        "harms",
+        "challenges",
+        "harm_chains",
+        "contributions",
+        "gaps",
+        "unresolved",
+        "notes"
+      ],
+      "type": "object"
+    },
+    "incident_id": {
+      "type": "integer"
+    },
+    "job_id": {
+      "maxLength": 1500,
+      "minLength": 1,
+      "type": "string"
+    },
+    "model_id": {
+      "maxLength": 1500,
+      "minLength": 1,
+      "type": "string"
+    },
+    "run_id": {
+      "maxLength": 1500,
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0"
+    },
+    "source_review": {
+      "additionalProperties": false,
+      "properties": {
+        "all_supplied_fields_read": {
+          "const": true
+        },
+        "limitations": {
+          "maxLength": 1500,
+          "type": "string"
+        },
+        "reports_read": {
+          "items": {
+            "type": "integer"
+          },
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "all_supplied_fields_read",
+        "reports_read",
+        "limitations"
+      ],
+      "type": "object"
+    },
+    "source_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "stage": {
+      "const": "strict"
+    }
+  },
+  "required": [
+    "schema_version",
+    "incident_id",
+    "model_id",
+    "run_id",
+    "job_id",
+    "source_sha256",
+    "source_review",
+    "stage",
+    "coding"
+  ],
+  "type": "object"
+}

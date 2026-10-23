@@ -1,0 +1,18 @@
+{
+  "incident_id": 1,
+  "incident": {
+    "source_identifier": "replace-with-your-own-id",
+    "title": "Replace with the incident title",
+    "description": "Replace with your incident narrative. Keep source uncertainty and distinguish observed outcomes from allegations or possibilities."
+  },
+  "reports": [
+    {
+      "report_number": 1,
+      "row": {
+        "title": "Replace with the report title",
+        "url": "https://example.org/replace-with-source-url",
+        "text": "Replace with the complete saved report text. The launcher does not fetch URLs."
+      }
+    }
+  ]
+}

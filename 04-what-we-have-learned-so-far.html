@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>What we have learned from the first incident collection</title><style>*{box-sizing:border-box}body{margin:0;background:#f3f1eb;color:#26353e;font:18px/1.65 Georgia,serif}main{max-width:1000px;margin:auto;padding:36px 60px 70px;background:white;min-height:100vh}nav,footer,.status{font:13px/1.5 Arial,sans-serif}nav{display:flex;flex-wrap:wrap;gap:12px;border-bottom:1px solid #ddd;padding-bottom:20px}.status{color:#7c5518;margin-top:25px}h1,h2,h3{font-family:Arial,sans-serif;line-height:1.15}h1{font-size:40px;color:#155d63}h2{font-size:25px;margin-top:38px}a{color:#176d72}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%;font:15px/1.5 Arial,sans-serif;margin:24px 0}td,th{padding:12px;text-align:left;border:1px solid #d6dfdd;vertical-align:top}th{background:#edf5f3}code{font-size:12px;overflow-wrap:anywhere}footer{margin-top:44px;border-top:1px solid #ddd;padding-top:15px}@media(max-width:650px){main{padding:24px}h1{font-size:32px}table{font-size:13px}td,th{padding:7px}}@media print{nav{display:none}main{padding:0}body{background:white}h2{break-after:avoid}img,tr{break-inside:avoid}}</style></head><body><main><nav aria-label="Reviewer documents"><a href="00-start-here.html">Start here</a><a href="01-what-we-are-coding.html">01</a><a href="02-where-the-incidents-come-from.html">02</a><a href="03-how-we-code-an-incident.html">03</a><a href="04-what-we-have-learned-so-far.html">04</a><a href="05-how-we-code-mitigations.html">05</a><a href="06-validation-and-expansion.html">06</a><a href="coding-kit/README.html">Code your own incidents</a></nav><div class="status">RESEARCH DRAFT · UPDATED OCTOBER 23, 2026</div><h1>What we have learned from the first incident collection</h1>
+<p>The work so far shows that we can apply a common vocabulary to a large collection of incident reports and describe more than a single label for each case. It has also revealed where coding judgments are difficult and where human correction matters.</p>
+<p>These early findings concern the <strong>1,597 AIID records</strong> in the July 27, 2026 snapshot. They come from the saved September review of that coding exercise, using taxonomy version 0.9.2.</p>
+<p><img src="figures/baseline-findings.png" alt="1487 records have harms, 933 have harm-to-harm connections, and 1074 have wider contributions"></p>
+<p><em>Each bar uses the same 1,597-record baseline. The groups overlap and must not be summed.</em></p>
+<h2>The coding captures harms and their connections</h2>
+<p>The coding identifies at least one harm in <strong>1,487 records</strong>. It records an explicit connection from one harm to another in <strong>933 records</strong>, and a contribution to wider harm in <strong>1,074 records</strong>.</p>
+<p>These groups overlap. The figures describe what was coded in the reports; they do not estimate how often these harms occur across society. A contribution to wider harm also does not mean that the incident, by itself, produced a society-wide outcome.</p>
+<p>After the saved human decisions, 1,565 records were considered in scope and 32 outside scope. The figures above describe the full set of 1,597 processed records, rather than a separate sample of retained cases.</p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th style="text-align:right">Count</th>
+<th style="text-align:right">Share of 1,597 processed records</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>At least one coded harm</td>
+<td style="text-align:right">1,487</td>
+<td style="text-align:right">93.1%</td>
+</tr>
+<tr>
+<td>Explicit harm-to-harm chain</td>
+<td style="text-align:right">933</td>
+<td style="text-align:right">58.4%</td>
+</tr>
+<tr>
+<td>Distal contribution link</td>
+<td style="text-align:right">1,074</td>
+<td style="text-align:right">67.3%</td>
+</tr>
+<tr>
+<td>No coded harm</td>
+<td style="text-align:right">110</td>
+<td style="text-align:right">6.9%</td>
+</tr>
+</tbody>
+</table>
+<p>These are overlapping descriptive measures, apart from harm versus no harm. The 110 records without a coded harm are a different measure from the 110 records with saved human verification. A record without a coded harm is not automatically outside scope. Structural checks found no unresolved chain references or cycles; they do not validate the causal interpretation.</p>
+<h2>Some distinctions repeatedly require judgment</h2>
+<p>A recurring difficulty is deciding whether a report establishes an outcome or only a danger. Another is deciding whether it describes harm to particular people or a wider condition affecting institutions or society.</p>
+<p>The work also tests how much detail a category can reasonably claim. A report may support a general failure without explaining exactly why it happened. Adding a specific mechanism in that situation would make the coding look more informative than the evidence allows.</p>
+<p>These difficulties have informed changes to definitions, coding instructions and the taxonomy itself. Constructed scenarios have helped test difficult boundaries too, so changes made during incident development should not all be described as discoveries from real incidents.</p>
+<h2>Human review remains essential</h2>
+<p>The saved review includes human verification of <strong>110 records</strong>, with complete replacement of the model’s final coding in <strong>37</strong> of them. The other records retain their model-produced final coding.</p>
+<p>That demonstrates the value of human review, but the reviewed cases do not provide a random sample from which to estimate the overall error rate. Completing the AI workflow is therefore a different milestone from validating the full collection with people.</p>
+<p>The next study addresses this directly: people will code a separate set of 116 incidents before seeing model answers. That will help us distinguish consistent model behavior from coding that independent readers find well supported.</p>
+<footer>Independent human validation materials must remain separate from held-out model outputs. <a href="00-start-here.html">Return to overview</a></footer></main></body></html>

@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="2330" viewBox="0 0 1000 2330" role="img" aria-labelledby="title desc">
+<title id="title">Mitigation extraction, coding and risk mapping with four agents</title>
+<desc id="desc">The same four agents work across extraction and mapping. A and B independently code. C prepares, reconciles and corrects. D independently reviews and checks corrections. Each stage permits at most one correction and check. Any agent can flag an issue for a human decision; affected scope is held while unaffected work continues.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#526175" stroke-width="1.5"/></marker></defs>
+<rect width="1000" height="2330" fill="#ffffff"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#182438}.title{font-size:28px;font-weight:600}.heading{font-size:21px;font-weight:600}.label{font-size:18px}.small{font-size:16px}.owner{font-size:17px;font-weight:600}.edge{fill:none;stroke:#526175;stroke-width:1.6;marker-end:url(#arrow)}.human-edge{fill:none;stroke:#526175;stroke-width:1.4;stroke-dasharray:6 5;marker-end:url(#arrow)}</style>
+<text x="36" y="45" class="title" text-anchor="start">Mitigation extraction, coding and risk mapping</text>
+<text x="36" y="78" class="heading" text-anchor="start">4 agents total, reused across both stages</text>
+<text x="36" y="110" class="small" text-anchor="start">A + B: 2 independent coders  ·  C: 1 coordinator / reconciler  ·  D: 1 reviewer</text>
+<text x="36" y="138" class="small" text-anchor="start">Corrections reuse C; rechecks reuse D. Human decisions are separate from the agent count.</text>
+<text x="36" y="185" class="heading" text-anchor="start">1  Extract and review source controls</text>
+<rect x="80" y="210" width="580" height="78" rx="7" fill="#f2f3f5" stroke="#a4aebb" stroke-width="1"/>
+<text x="370.0" y="234" class="owner" text-anchor="middle">AGENT C</text>
+<text x="370.0" y="259" class="label" text-anchor="middle">Prepare source, evidence and shared instructions</text>
+<rect x="40" y="325" width="300" height="78" rx="7" fill="#edf4fb" stroke="#a4aebb" stroke-width="1"/>
+<text x="190.0" y="349" class="owner" text-anchor="middle">AGENT A</text>
+<text x="190.0" y="374" class="label" text-anchor="middle">Independently extract controls</text>
+<rect x="400" y="325" width="300" height="78" rx="7" fill="#edf4fb" stroke="#a4aebb" stroke-width="1"/>
+<text x="550.0" y="349" class="owner" text-anchor="middle">AGENT B</text>
+<text x="550.0" y="374" class="label" text-anchor="middle">Independently extract controls</text>
+<rect x="80" y="440" width="580" height="78" rx="7" fill="#f2f3f5" stroke="#a4aebb" stroke-width="1"/>
+<text x="370.0" y="464" class="owner" text-anchor="middle">AGENT C</text>
+<text x="370.0" y="489" class="label" text-anchor="middle">Reconcile both extractions against the source</text>
+<rect x="80" y="550" width="580" height="78" rx="7" fill="#f2f3f5" stroke="#a4aebb" stroke-width="1"/>
+<text x="370.0" y="574" class="owner" text-anchor="middle">AGENT C</text>
+<text x="370.0" y="599" class="label" text-anchor="middle">Justify control boundaries and merges / splits</text>
+<rect x="80" y="660" width="580" height="78" rx="7" fill="#eef5f1" stroke="#a4aebb" stroke-width="1"/>
+<text x="370.0" y="684" class="owner" text-anchor="middle">AGENT D</text>
+<text x="370.0" y="709" class="label" text-anchor="middle">Check coverage, evidence and granularity</text>
+<rect x="400" y="800" width="300" height="78" rx="7" fill="#f2f3f5" stroke="#a4aebb" stroke-width="1"/>
+<text x="550.0" y="824" class="owner" text-anchor="middle">AGENT C</text>
+<text x="550.0" y="849" class="label" text-anchor="middle">Apply one correction</text>
+<rect x="400" y="910" width="300" height="78" rx="7" fill="#eef5f1" stroke="#a4aebb" stroke-width="1"/>
+<text x="550.0" y="934" class="owner" text-anchor="middle">AGENT D</text>
+<text x="550.0" y="959" class="label" text-anchor="middle">Check corrections once</text>
+<rect x="80" y="1040" width="580" height="78" rx="7" fill="#f2f3f5" stroke="#a4aebb" stroke-width="1"/>
+<text x="370.0" y="1064" class="owner" text-anchor="middle">AGENT C</text>
+<text x="370.0" y="1089" class="label" text-anchor="middle">Freeze reviewed controls; preserve unresolved holds</text>
+<path class="edge" d="M 370.0 288 V 306.5 H 190.0 V 322"/>
+<path class="edge" d="M 370.0 288 V 306.5 H 550.0 V 322"/>
+<path class="edge" d="M 190.0 403 V 421.5 H 370.0 V 437"/>
+<path class="edge" d="M 550.0 403 V 421.5 H 370.0 V 437"/>
+<path class="edge" d="M 370.0 518 V 534.0 H 370.0 V 547"/>
+<path class="edge" d="M 370.0 628 V 644.0 H 370.0 V 657"/>
+<path class="edge" d="M 550.0 878 V 894.0 H 550.0 V 907"/>
+<path class="edge" d="M 550.0 988 V 1014.0 H 370.0 V 1037"/>
+<path class="edge" d="M 370 738 V 765 H 550 V 797"/>
+<text x="530" y="787" class="small" text-anchor="end">If correction needed</text>
+<path class="edge" d="M 370 738 V 765 H 70 V 1015 H 370 V 1037"/>
+<text x="190" y="839" class="small" text-anchor="middle">Accepted scope</text>
+<text x="190" y="861" class="small" text-anchor="middle">can proceed</text>
+<text x="190" y="903" class="small" text-anchor="middle">Unresolved scope</text>
+<text x="190" y="925" class="small" text-anchor="middle">remains held</text>
+<text x="36" y="1160" class="heading" text-anchor="start">2  Classify controls and map risk relationships</text>
+<rect x="80" y="1190" width="580" height="78" rx="7" fill="#f2f3f5" stroke="#a4aebb" stroke-width="1"/>
+<text x="370.0" y="1214" class="owner" text-anchor="middle">AGENT C</text>
+<text x="370.0" y="1239" class="label" text-anchor="middle">Give both coders identical controls and definitions</text>
+<path class="edge" d="M 370 1118 V 1130"/>
+<path class="edge" d="M 370 1175 V 1187"/>
+<rect x="40" y="1305" width="300" height="78" rx="7" fill="#edf4fb" stroke="#a4aebb" stroke-width="1"/>
+<text x="190.0" y="1329" class="owner" text-anchor="middle">AGENT A</text>
+<text x="190.0" y="1354" class="label" text-anchor="middle">Assign mitigation types</text>
+<rect x="400" y="1305" width="300" height="78" rx="7" fill="#edf4fb" stroke="#a4aebb" stroke-width="1"/>
+<text x="550.0" y="1329" class="owner" text-anchor="middle">AGENT B</text>
+<text x="550.0" y="1354" class="label" text-anchor="middle">Assign mitigation types</text>
+<rect x="40" y="1415" width="300" height="78" rx="7" fill="#edf4fb" stroke="#a4aebb" stroke-width="1"/>
+<text x="190.0" y="1439" class="owner" text-anchor="middle">AGENT A</text>
+<text x="190.0" y="1464" class="label" text-anchor="middle">Select supported risk targets</text>
+<rect x="400" y="1415" width="300" height="78" rx="7" fill="#edf4fb" stroke="#a4aebb" stroke-width="1"/>
+<text x="550.0" y="1439" class="owner" text-anchor="middle">AGENT B</text>
+<text x="550.0" y="1464" class="label" text-anchor="middle">Select supported risk targets</text>
+<rect x="40" y="1525" width="300" height="78" rx="7" fill="#edf4fb" stroke="#a4aebb" stroke-width="1"/>
+<text x="190.0" y="1549" class="owner" text-anchor="middle">AGENT A</text>
+<text x="190.0" y="1574" class="label" text-anchor="middle">Label relationships;</text>
+<text x="190.0" y="1595" class="label" text-anchor="middle">cite evidence and rationale</text>
+<rect x="400" y="1525" width="300" height="78" rx="7" fill="#edf4fb" stroke="#a4aebb" stroke-width="1"/>
+<text x="550.0" y="1549" class="owner" text-anchor="middle">AGENT B</text>
+<text x="550.0" y="1574" class="label" text-anchor="middle">Label relationships;</text>
+<text x="550.0" y="1595" class="label" text-anchor="middle">cite evidence and rationale</text>
+<rect x="80" y="1640" width="580" height="78" rx="7" fill="#f2f3f5" stroke="#a4aebb" stroke-width="1"/>
+<text x="370.0" y="1664" class="owner" text-anchor="middle">AGENT C</text>
+<text x="370.0" y="1689" class="label" text-anchor="middle">Reconcile types, targets, relationships and abstentions</text>
+<rect x="80" y="1750" width="580" height="78" rx="7" fill="#eef5f1" stroke="#a4aebb" stroke-width="1"/>
+<text x="370.0" y="1774" class="owner" text-anchor="middle">AGENT D</text>
+<text x="370.0" y="1799" class="label" text-anchor="middle">Independently review all mapping decisions</text>
+<rect x="400" y="1890" width="300" height="78" rx="7" fill="#f2f3f5" stroke="#a4aebb" stroke-width="1"/>
+<text x="550.0" y="1914" class="owner" text-anchor="middle">AGENT C</text>
+<text x="550.0" y="1939" class="label" text-anchor="middle">Apply one correction</text>
+<rect x="400" y="2000" width="300" height="78" rx="7" fill="#eef5f1" stroke="#a4aebb" stroke-width="1"/>
+<text x="550.0" y="2024" class="owner" text-anchor="middle">AGENT D</text>
+<text x="550.0" y="2049" class="label" text-anchor="middle">Check corrections once</text>
+<rect x="80" y="2130" width="580" height="78" rx="7" fill="#f2f3f5" stroke="#a4aebb" stroke-width="1"/>
+<text x="370.0" y="2154" class="owner" text-anchor="middle">AGENT C</text>
+<text x="370.0" y="2179" class="label" text-anchor="middle">Deliver findings, tables, evidence and open questions</text>
+<path class="edge" d="M 370.0 1268 V 1286.5 H 190.0 V 1302"/>
+<path class="edge" d="M 370.0 1268 V 1286.5 H 550.0 V 1302"/>
+<path class="edge" d="M 190.0 1383 V 1399.0 H 190.0 V 1412"/>
+<path class="edge" d="M 550.0 1383 V 1399.0 H 550.0 V 1412"/>
+<path class="edge" d="M 190.0 1493 V 1509.0 H 190.0 V 1522"/>
+<path class="edge" d="M 550.0 1493 V 1509.0 H 550.0 V 1522"/>
+<path class="edge" d="M 190.0 1603 V 1621.5 H 370.0 V 1637"/>
+<path class="edge" d="M 550.0 1603 V 1621.5 H 370.0 V 1637"/>
+<path class="edge" d="M 370.0 1718 V 1734.0 H 370.0 V 1747"/>
+<path class="edge" d="M 550.0 1968 V 1984.0 H 550.0 V 1997"/>
+<path class="edge" d="M 550.0 2078 V 2104.0 H 370.0 V 2127"/>
+<path class="edge" d="M 370 1828 V 1855 H 550 V 1887"/>
+<text x="530" y="1877" class="small" text-anchor="end">If correction needed</text>
+<path class="edge" d="M 370 1828 V 1855 H 70 V 2105 H 370 V 2127"/>
+<text x="190" y="1929" class="small" text-anchor="middle">Accepted scope</text>
+<text x="190" y="1951" class="small" text-anchor="middle">can proceed</text>
+<text x="190" y="1993" class="small" text-anchor="middle">Unresolved scope</text>
+<text x="190" y="2015" class="small" text-anchor="middle">remains held</text>
+<text x="860" y="240" class="heading" text-anchor="middle">At any stage</text>
+<text x="860" y="271" class="small" text-anchor="middle">Any agent may flag an issue</text>
+<rect x="750" y="310" width="220" height="96" rx="7" fill="#f2f3f5" stroke="#a4aebb" stroke-width="1"/>
+<text x="860.0" y="334" class="owner" text-anchor="middle">AGENT C</text>
+<text x="860.0" y="359" class="label" text-anchor="middle">Record evidence;</text>
+<text x="860.0" y="380" class="label" text-anchor="middle">hold affected scope</text>
+<rect x="750" y="460" width="220" height="96" rx="7" fill="#fff5e7" stroke="#a4aebb" stroke-width="1"/>
+<text x="860.0" y="484" class="owner" text-anchor="middle">HUMAN REVIEW</text>
+<text x="860.0" y="509" class="label" text-anchor="middle">Decide the unresolved</text>
+<text x="860.0" y="530" class="label" text-anchor="middle">substantive question</text>
+<rect x="750" y="610" width="220" height="96" rx="7" fill="#f2f3f5" stroke="#a4aebb" stroke-width="1"/>
+<text x="860.0" y="634" class="owner" text-anchor="middle">AGENT C</text>
+<text x="860.0" y="659" class="label" text-anchor="middle">Record the decision;</text>
+<text x="860.0" y="680" class="label" text-anchor="middle">route a scoped update</text>
+<path class="edge" d="M 860.0 406 V 433.0 H 860.0 V 457"/>
+<path class="edge" d="M 860.0 556 V 583.0 H 860.0 V 607"/>
+<path class="human-edge" d="M 660 699 H 724 V 358 H 747"/>
+<path class="human-edge" d="M 660 1789 H 724 V 358 H 747"/>
+<text x="860" y="753" class="small" text-anchor="middle">Unaffected work continues.</text>
+<text x="860" y="782" class="small" text-anchor="middle">No answer keeps the</text>
+<text x="860" y="803" class="small" text-anchor="middle">affected scope on hold.</text>
+<text x="860" y="849" class="small" text-anchor="middle">Assigned agents update</text>
+<text x="860" y="870" class="small" text-anchor="middle">the affected work;</text>
+<text x="860" y="891" class="small" text-anchor="middle">the reviewer checks it.</text>
+<text x="860" y="937" class="small" text-anchor="middle">Advisory gaps may accompany</text>
+<text x="860" y="958" class="small" text-anchor="middle">otherwise justified coding.</text>
+<text x="36" y="2255" class="small" text-anchor="start">Independent means separate judgments within each stage; the agents can share a model family.</text>
+<text x="36" y="2283" class="small" text-anchor="start">A supported mapping describes the intended relationship. It does not establish measured effectiveness.</text>
+</svg>
