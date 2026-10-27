@@ -5,3 +5,5 @@ runs/
 my-incident.json
 *-response.json
 .DS_Store
+node_modules/
+_site/
