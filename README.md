@@ -25,7 +25,7 @@ Follow the [getting-started guide](coding-kit/README.md). The kit includes the [
 
 The launcher prepares each stage's materials and saves the returned answers. It makes no model or API calls. The kit uses the frozen v0.9.5 incident instrument; this repository is a research draft, and the reliability study is intended to assess how consistently it can be applied.
 
-Markdown files can also be read directly on GitHub. To read offline, download the repository and open `index.html`.
+Markdown files are the maintained source and can be read directly on GitHub. The website is generated from those same files. For an offline HTML copy, follow the build instructions below and open `_site/index.html`.
 
 ## Licensing
 
@@ -39,3 +39,19 @@ This repository uses separate licenses, according to the material:
 The repository's MIT license applies to the software listed above. It does not license the codebook or other research materials under MIT. HTML reading copies have the same license as the documents they render.
 
 For reuse of research materials under CC BY-NC-SA 4.0, credit Aditya Singh, link to this repository and the license, and identify modifications. Shared adaptations must follow that license's ShareAlike terms. Commercial permissions for protected research materials require a separate arrangement with the rights holder. Third-party materials retain their own applicable terms.
+
+## Maintaining the documentation
+
+Edit the Markdown documents, then build and check the website with Node.js 22 or later:
+
+```sh
+npm ci
+npm run build
+npm test
+```
+
+Generated HTML is written to `_site/` and is not committed. The build preserves the existing website URLs, including both `index.html` and `00-start-here.html`. Shared styling lives in `site/style.css`; the page layout and navigation live in `scripts/build-site.cjs`. The coding kit's Markdown, prompts, schemas and Python files are copied unchanged so they remain usable as coding inputs.
+
+Pull requests build the site and check its local links and copied coding materials. Changes merged to `main` deploy through GitHub Actions.
+
+**One-time hosting setup:** Before merging this build migration, select **Settings → Pages → Build and deployment → Source → GitHub Actions**. The previous branch-based publishing setup expects committed HTML files; it must switch to the generated artifact. After merging, verify the Documentation website workflow completes. You can rerun it from the Actions tab.
