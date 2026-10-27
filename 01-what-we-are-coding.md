@@ -2,7 +2,7 @@
 
 The risk taxonomy prototype turns an AI incident account into a structured description of how the problem arose, what capability was involved, what was harmed, and what conditions made prevention or response difficult. It gives researchers a shared vocabulary for comparing incidents described in very different language, while retaining the source evidence behind each judgment.
 
-The prototype combines three parts: a hierarchy of defined risk concepts, a coding guide for applying those concepts to incident evidence, and crosswalks connecting them to existing frameworks, including the AI Risk Index (AIRI). It also provides common risk targets for separately coded mitigations. **This is a research prototype, not yet a public release.**
+The prototype combines three parts: a hierarchy of defined risk concepts, a coding guide for applying those concepts to incident evidence, and crosswalks connecting them to existing frameworks, including the AI Risk Index (AIRI). It also provides common risk targets for separately coded mitigations.
 
 ## Five dimensions of an incident
 
@@ -11,7 +11,7 @@ Each axis represents a different dimension of an incident: its causes, the AI ca
 | Axis | What it records | How to apply the distinction |
 | --- | --- | --- |
 | Cause | The mechanism through which the problem arose: for example, misuse, malfunction, an emergent interaction, or harmful effects of normal use. | Establish what happened and why the proposed mechanism fits. A bad outcome alone does not prove malfunction or malicious intent. |
-| Vector | The AI capability involved in the harmful pathway, such as generating content, predicting or deciding, ingesting data, or acting on a digital or physical system. | Identify the operative capability. A capability is not itself proof of harm; some infrastructure effects of AI can be coded without an applicable capability label. |
+| Vector | The AI capability involved in the harmful pathway, such as generating content, predicting or deciding, ingesting data, or acting on a digital or physical system. | Identify the operative capability. A capability is not itself proof of harm. |
 | Proximal harm | A supported outcome affecting bounded people, organizations, records, property, or environments. | Identify the affected entity and the outcome, such as wrongful denial of a benefit, financial loss, record corruption, injury, or local pollution. Proximal does not mean minor or short-lived. |
 | Distal harm | A supported degradation of a wider social, institutional, economic, or environmental system. | Identify the shared system and the change in its functioning. Severity, duration, or the number of people affected does not by itself establish a systemic outcome. |
 | Challenges | Standing conditions that make prevention, oversight, or response difficult, such as overreliance, limited transparency, or a specific governance gap. | Explain the condition and its connection to the incident. A single failure does not automatically establish a standing deficiency. |

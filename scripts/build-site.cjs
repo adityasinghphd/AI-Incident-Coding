@@ -45,7 +45,7 @@ for (const source of pages) {
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escape(title)}</title><link rel="stylesheet" href="${prefix}style.css"></head>
 <body><main><nav aria-label="Reviewer documents">${nav}<a href="${prefix}coding-kit/README.html">Code your own incidents</a></nav>
 ${md.render(text, { source })}
-<footer>Independent human validation materials must remain separate from held-out model outputs. <a href="${prefix}00-start-here.html">Return to overview</a> · <a href="${prefix}LICENSE-CONTENT.html">Content license</a></footer></main></body></html>\n`;
+<footer><a href="${prefix}LICENSE-CONTENT.html">Content license</a></footer></main></body></html>\n`;
   const target = path.join(output, source.replace(/\.md$/, '.html'));
   fs.mkdirSync(path.dirname(target), { recursive: true });
   fs.writeFileSync(target, html);
