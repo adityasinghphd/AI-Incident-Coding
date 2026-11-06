@@ -40,4 +40,4 @@ The saved review includes human verification of **110 records**, with complete r
 
 That demonstrates the value of human review, but the reviewed cases do not provide a random sample from which to estimate the overall error rate. Completing the AI workflow is therefore a different milestone from validating the full collection with people.
 
-The separate GPT comparison now reports strict, lenient, reconciled and final agreement on 105 complete held-out cases from the planned 116-entry collection. See [the new stage-by-stage and tier-by-tier results](06-validation-and-expansion.md). Independent human validation remains necessary to distinguish consistent model behavior from coding that independent readers find well supported.
+The separate GPT comparison reports final coding agreement by axis and category depth on 112 records from the planned 116-entry collection, including two setup pilots. See [the GPT agreement table](06-validation-and-expansion.md). Independent human validation remains necessary to distinguish consistent model behavior from coding that independent readers find well supported.
