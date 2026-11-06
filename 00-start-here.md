@@ -15,6 +15,8 @@ Read these short documents in order, or go directly to the part you want to asse
 5. [How we code mitigations](05-how-we-code-mitigations.md) — intervention boundaries, risk links, source conditions and open human decisions.
 6. [Validation and expansion](06-validation-and-expansion.md) — the 116-entry study, Sol/Luna/Astra comparison, blinded human coding and staged growth.
 
+7. [Explore the risk taxonomy](07-risk-taxonomy-explorer.md) — search definitions and expand the five axes in the study snapshot.
+
 ## Apply the method to your own incidents
 
 The [incident coding kit](coding-kit/README.md) includes the codebook, coding manual, five-stage protocol, input template and launch instructions. Supply your own incident narratives and saved source reports, then use the kit with your chosen AI system or apply the definitions manually.
